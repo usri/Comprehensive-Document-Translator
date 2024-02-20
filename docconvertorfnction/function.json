@@ -1,0 +1,13 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "myblob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "original/{name}",
+      "source": "EventGrid",
+      "connection": "document_storage_connstr"
+    }
+  ]
+} 

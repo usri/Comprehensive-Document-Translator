@@ -1,0 +1,21 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "msg",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "queuefortranslation",
+      "connection": "document_storage_connstr"
+    },
+    {
+      "type": "queue",
+      "direction": "out",
+      "name": "outputQueueItem",
+      "queueName": "queueforaggregation",
+      "connection": "document_storage_connstr"
+    }
+  ]
+}
+
+
