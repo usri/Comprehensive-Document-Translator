@@ -289,7 +289,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Enable public access:**&nbsp;&nbsp;&nbsp;&nbsp;On  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Enable network injection:**&nbsp;&nbsp;&nbsp;&nbsp; Off
 
-6.	At the **Create Logic App | Monitoring** screen enter the following then click on **Review + create**.
+6.	At the **Create Function App | Monitoring** screen enter the following then click on **Review + create**.
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Application Insights*</ins>  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Enable Application Insights:**&nbsp;&nbsp;&nbsp;&nbsp;Yes
@@ -297,26 +297,25 @@
 7.	Click **Create**.
 
 #### 4.1.2&nbsp;&nbsp;Create Function App Private Endpoint  
-1.	In the Azure Portal search box enter the name of the previously created Function App then once it is found click on it.
-2.	At the [Function App Name] blade under Settings click on Networking.
-3.	In the Right-Pane under Inbound Traffic click on Private endpoints.
-4.	At the Private Endpoint connections blade click + Add | Advanced.
-5.	At the Create private endpoint | Basics screen enter/select the following then click Next | Resource:
+1.	At the Your deployment is complete screen click on **Go to resource**.
+2.	At the **[Function App Name]** blade under **Settings** click on **Networking**.
+3.	In the **Right-Pane** under **Inbound traffic configuration | Private Endpoints** click on **0 Private endpoints**.
+4.	At the **Private Endpoint connections** blade click **+ Add | Advanced**.
+5.	At the **Create private endpoint | Basics** screen enter/select the following then click **Next | Resource:**
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Project Details*</ins>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Subscription:**&nbsp;&nbsp;&nbsp;&nbsp;[Select Storage Account Subscription]  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Resource Group:**&nbsp;&nbsp;&nbsp;&nbsp;[Select Previously Created Resource Group]  
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Instance Details*</ins>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name:**&nbsp;&nbsp;&nbsp;&nbsp;[Enter a descriptive name]  (Example: Translatorfucntionapp-sites)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Runtime stack:**&nbsp;&nbsp;&nbsp;&nbsp;Python  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name:**&nbsp;&nbsp;&nbsp;&nbsp;[Enter a descriptive name]  (Example: Translatorfucntionapp-sites)    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Region:**&nbsp;&nbsp;&nbsp;&nbsp;[Select a Region]  
 
-6.	At the Create private endpoint | Resource screen enter/select the following then click Next : Virtual Network:
+6.	At the **Create private endpoint | Resource** screen enter/select the following then click **Next : Virtual Network:**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Target sub-resource:**&nbsp;&nbsp;&nbsp;&nbsp;[Use the pulldown to select sites]  
 
-7.	At the Create private endpoint | Virtual Network screen enter/select the following then click Next : Virtual Tags:
+7.	At the **Create private endpoint | Virtual Network** screen enter/select the following then click **Next : Virtual Tags:**
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Networking*</ins>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Virtual network:**&nbsp;&nbsp;&nbsp;&nbsp;[Select Previously Created Virtual Network]  
@@ -329,35 +328,36 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make sure for each DNS Zone that the Subscription and Resource Group are selected where the Function App Infrastructure exists
 
-8.	At the Create a private endpoint | Tags screen click Next : Review + create.
-9.	At the Create a private endpoint | Review + create screen click Create.
+8.	At the **Create a private endpoint | Tags** screen click **Next : Review + create**.
+9.	At the **Create a private endpoint | Review + create** screen click **Create**.
 
 #### 4.1.3&nbsp;&nbsp;Add Function App Virtual Network Integration  
-1.	In the Azure Portal search box enter the name of the previously created Function App then once it is found click on it.
-2.	At the [Function App Name] blade under Settings click on Networking.
-3.	In the Right-Pane under Outbound Traffic click on VNet intergration.
-4.	At the VNet Integration blade click + Add VNet.
-5.	At the Add VNet Integration pop-out blade use the Virtual Network pull-down menu to select the Function App Virtual Network.
-6.	Use the Subnet pull-down menu to select the ServerFarm Subnet then click OK.
+1.	In the Azure Portal search box enter the name of the previously created **Function App** then once it is found click on it.
+2.	At the **[Function App Name]** blade under **Settings** click on **Networking**.
+3.	In the **Right-Pane** under **Outbound Traffic configuration | Virtual network integration** click on **Not configured**.
+4.	At the **VNet Integration** blade click **+ Add VNet**.
+5.	At the **Virtual Network Integration** blade click on **Add virtual network integration**.
+6.  At the **Add virtual network integration** pop-out blade use the **Virtual Network** pull-down menu to select the **Function App Virtual Network**.
+6.	Use the **Subnet** pull-down menu to select the **ServerFarm** Subnet then click **Connect**.
 
 #### 4.1.4&nbsp;&nbsp;Function App Configuration  
-1.	In the Azure Portal search box enter the name of the previously created Function App then once it is found click on it.
-2.	At the [Function App Name] blade under Settings click on Configuration.
-3.	In the Right-Pane under Application settings click on + New application setting.
-4.	At the Add/Edit application setting enter the following then click OK:
+1.	At the Your deployment is complete screen click on **Go to resource**.
+2.	At the **[Function App Name]** blade under **Settings** click on **Configuration**.
+3.	In the **Right-Pane** under **Application settings** click on **+ New application setting**.
+4.	At the **Add/Edit application setting** enter the following then click **OK**:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name:**&nbsp;&nbsp;&nbsp;&nbsp;document_storage_connstr  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Value:**&nbsp;&nbsp;&nbsp;&nbsp;[Enter the Storage Account Connection String without brackets]
 
-5.	In the Right-Pane under Application settings click on + New application setting.
-6.	At the Add/Edit application setting enter the following then click OK:
+5.	In the **Right-Pane** under **Application settings** click on **+ New application setting**.
+6.	At the **Add/Edit application setting** enter the following then click **OK**:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name:**&nbsp;&nbsp;&nbsp;&nbsp;target_blob_url  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Value:**&nbsp;&nbsp;&nbsp;&nbsp;[Enter the Storage Account Blob Endpoint URL without brackets with “output-simple” added to the URL ]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Value:**&nbsp;&nbsp;&nbsp;&nbsp;[Enter the Storage Account Blob Endpoint URL without brackets with "output-simple" added to the URL]
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Example:**&nbsp;&nbsp;&nbsp;&nbsp;https://[storageaccountname].blob.core.usgovcloudapi.net/output-simple
 
-7.	At the Add/Edit application setting enter the following then click OK:
+7.	At the **Add/Edit application setting** enter the following then click **OK**:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name:**&nbsp;&nbsp;&nbsp;&nbsp;translator_endpoint  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Value:**&nbsp;&nbsp;&nbsp;&nbsp;[Enter the Translator Endpoint URL without brackets]
