@@ -20,6 +20,9 @@
 - Storage Account Private Endpoint – Blob
 - Storage Account Private Endpoint Network Interface Card – Blob
 - Storage Account Private DNS Zone – Blob
+- Storage Account Private Endpoint – Queue
+- Storage Account Private Endpoint Network Interface Card – Queue
+- Storage Account Private DNS Zone – Queue
 - Translation Service
 - Translation Service Private Endpoint
 - Translation Service Private Endpoint Network Interface Card
@@ -157,7 +160,7 @@
 6.	At the New container pop-out blade enter the following then click Create:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name::**&nbsp;&nbsp;&nbsp;&nbsp;output-simple
-
+--
 #### 3.2.3&nbsp;&nbsp;Create Storage Account Blob Private Endpoint  
 1.	At the Your deployment is complete screen click on Go to resource.
 2.	At the [Storage Account Name] blade under Settings + networking click on Networking.
@@ -190,9 +193,43 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make sure for each DNS Zone that the Subscription and Resource Group are selected where the Function App Infrastructure exists
 
 7.	At the Create a private endpoint | Tags screen click Next : Review + create.
-8.	At the Create a private en
+8.	At the Create a private endpoint | Review + create screen click Create.
 
-#### 3.2.4&nbsp;&nbsp;Assign Translator System Managed Identity Storage Permissions  
+#### 3.2.4&nbsp;&nbsp;Create Storage Account Queue Private Endpoint  
+1.	In the Azure Portal search box enter the name of the previously created Storage Account then once it is found click on it.
+2.	At the [Storage Account Name] blade under Settings + networking click on Networking.
+3.	In the Right-Pane click on Private endpoint connections then click on + Private endpoint.
+4.	At the Create private endpoint | Basics screen enter/select the following then click Next | Resource:
+
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Project Details*</ins>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Subscription:**&nbsp;&nbsp;&nbsp;&nbsp;[Select Storage Account Subscription]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Resource Group:**&nbsp;&nbsp;&nbsp;&nbsp;[Select Previously Created Resource Group]  
+
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Instance Details*</ins>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name:**&nbsp;&nbsp;&nbsp;&nbsp;Enter a descriptive name  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Region:**&nbsp;&nbsp;&nbsp;&nbsp;[Select a Region]  
+
+5.	At the Create private endpoint | Resource screen enter/select the following then click Next : Virtual Network:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Target sub-resource:**&nbsp;&nbsp;&nbsp;&nbsp;[Use the pulldown to select blob]
+
+6.	At the Create private endpoint | Virtual Network screen enter/select the following then click Next : Virtual Tags:
+
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Networking*</ins>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Virtual network:**&nbsp;&nbsp;&nbsp;&nbsp;[Select Previously Created Virtual Network]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Subnet:**&nbsp;&nbsp;&nbsp;&nbsp;[Select PrivateEndpoints Subnet]  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Private IP configuration:**&nbsp;&nbsp;&nbsp;&nbsp;Dynamically allocated IP address		
+
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Private DNS integration*</ins>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Subnet:**&nbsp;&nbsp;&nbsp;&nbsp;Yes  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make sure for each DNS Zone that the Subscription and Resource Group are selected where the Function App Infrastructure exists
+
+7.	At the Create a private endpoint | Tags screen click Next : Review + create.
+8.	At the Create a private endpoint | Review + create screen click Create.
+
+#### 3.2.5&nbsp;&nbsp;Assign Translator System Managed Identity Storage Permissions  
 1.	In the Azure Portal search box enter the name of the previously created Storage Account then once it is found click on it.
 2.	At the [Storage Account Name] blade click on Access Control (IAM).
 3.	In the Right-Pane click on + Add | Add role assignment.
@@ -202,7 +239,7 @@
 7.	Click the previously created Translator then click Select.
 8.	Click Review + assign.
 
-#### 3.2.5&nbsp;&nbsp;Retrieving Storage Account Connection String  
+#### 3.2.6&nbsp;&nbsp;Retrieving Storage Account Connection String  
 9.	Use the search box and enter Storage accounts then select the object.
 10.	At the Storage accounts blade locate and click on the previously created Storage Account.
 11.	At the [Storage Account Name] blade under Security + networking click on Access keys.
@@ -210,7 +247,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connection string value which will be used later for the Function App Configuration.
 
-#### 3.2.6&nbsp;&nbsp;Retrieving Storage Account Blob Endpoint  
+#### 3.2.7&nbsp;&nbsp;Retrieving Storage Account Blob Endpoint  
 1.	Use the search box and enter Storage accounts then select the object.
 2.	At the Storage accounts blade locate and click on the previously created Storage Account.
 3.	At the [Storage Account Name] blade under Settings click on Endpoints.
