@@ -112,11 +112,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name:**&nbsp;&nbsp;&nbsp;&nbsp;[Enter a descriptive name]  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Region:**&nbsp;&nbsp;&nbsp;&nbsp;[Select a Region]  
 
-5.	At the Create private endpoint | Resource screen enter/select the following then click Next : Virtual Network:  
+5.	At the **Create private endpoint | Resource** screen enter/select the following then click **Next : Virtual Network:**  
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Target sub-resource:**&nbsp;&nbsp;&nbsp;&nbsp;[Use the pulldown to select account]  
 
-6.	At the Create private endpoint | Virtual Network screen enter/select the following then click Next : Virtual Tags:
+6.	At the **Create private endpoint | Virtual Network** screen enter/select the following then click **Next : Virtual Tags:**
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Networking*</ins>  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Virtual network:**&nbsp;&nbsp;&nbsp;&nbsp;[Select Previously Created Virtual Network]  
@@ -129,14 +129,14 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Make sure for each DNS Zone that the Subscription and Resource Group are selected where the Function App Infrastructure exists*
 
-7.	At the Create a private endpoint | Tags screen click Next : Review + create.
-8.	At the Create a private endpoint | Review + create screen click Create.
+7.	At the **Create a private endpoint | Tags** screen click **Next : Review + create**.
+8.	At the **Create a private endpoint | Review + create** screen click **Create**.
 
 ### 3.2&nbsp;&nbsp;Storage Accounts
 #### 3.2.1&nbsp;&nbsp;Function App Job Storage Deployment  
-1.	Use the search box and enter Storage accounts then select the object.
-2.	At the Storage accounts blade click on + Create.
-3.	At the Create a storage account | Basics screen enter the following then click on Review.
+1.	Use the search box and enter **Storage accounts** then select the object.
+2.	At the **Storage accounts** blade click on **+ Create**.
+3.	At the **Create a storage account | Basics** screen enter the following then click on Review.
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Project Details*</ins>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Resource Group:**&nbsp;&nbsp;&nbsp;&nbsp;[Select Previously Created Resource Group]  
@@ -147,13 +147,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Performance:**&nbsp;&nbsp;&nbsp;&nbsp;Standard  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Redundancy::**&nbsp;&nbsp;&nbsp;&nbsp;Geo-redundant storage (GRS)
 
-4.	Click Create.
+4.	Click **Create**.
 
 #### 3.2.2&nbsp;&nbsp;Create Storage Account Containers  
-1.	At the Your deployment is complete screen click on Go to resource.
-2.	At the [Storage Account Name] blade under Data storage click on Containers.
-3.	In the Right-Pane click on + Container.
-4.	At the New container pop-out blade enter the following then click Create:
+1.	At the Your deployment is complete screen click on **Go to resource**.
+2.	At the **[Storage Account Name]** blade under **Data storage** click on **Containers**.
+3.	In the **Right-Pane** click on **+ Container**.
+4.	At the **New container** pop-out blade enter the following then click **Create:**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name::**&nbsp;&nbsp;&nbsp;&nbsp;input-simple
 
@@ -161,12 +161,11 @@
 6.	At the New container pop-out blade enter the following then click Create:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name::**&nbsp;&nbsp;&nbsp;&nbsp;output-simple
---
+
 #### 3.2.3&nbsp;&nbsp;Create Storage Account Blob Private Endpoint  
-1.	At the Your deployment is complete screen click on Go to resource.
-2.	At the [Storage Account Name] blade under Settings + networking click on Networking.
-3.	In the Right-Pane click on Private endpoint connections then click on + Private endpoint.
-4.	At the Create private endpoint | Basics screen enter/select the following then click Next | Resource:
+1.	At the **[Storage Account Name]** blade under **Settings + networking** click on **Networking**.
+2.	In the **Right-Pane** click on **Private endpoint connections** then click on **+ Private endpoint**.
+3.	At the **Create private endpoint | Basics** screen enter/select the following then click **Next | Resource:**
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Project Details*</ins>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Subscription:**&nbsp;&nbsp;&nbsp;&nbsp;[Select Storage Account Subscription]  
