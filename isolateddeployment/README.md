@@ -176,11 +176,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example:  Functionapptranslator-blob*  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Region:**&nbsp;&nbsp;&nbsp;&nbsp;[Select a Region]  
 
-5.	At the Create private endpoint | Resource screen enter/select the following then click Next : Virtual Network:
+5.	At the **Create private endpoint | Resource** screen enter/select the following then click **Next : Virtual Network:**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Target sub-resource:**&nbsp;&nbsp;&nbsp;&nbsp;[Use the pulldown to select blob]
 
-6.	At the Create private endpoint | Virtual Network screen enter/select the following then click Next : Virtual Tags:
+6.	At the **Create private endpoint | Virtual Network** screen enter/select the following then click **Next : Virtual Tags:**
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Networking*</ins>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Virtual network:**&nbsp;&nbsp;&nbsp;&nbsp;[Select Previously Created Virtual Network]  
@@ -193,14 +193,14 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make sure for each DNS Zone that the Subscription and Resource Group are selected where the Function App Infrastructure exists
 
-7.	At the Create a private endpoint | Tags screen click Next : Review + create.
-8.	At the Create a private endpoint | Review + create screen click Create.
+7.	At the **Create a private endpoint | Tags** screen click **Next : Review + create**.
+8.	At the **Create a private endpoint | Review + create** screen click **Create**.
 
 #### 3.2.4&nbsp;&nbsp;Create Storage Account Queue Private Endpoint  
-1.	In the Azure Portal search box enter the name of the previously created Storage Account then once it is found click on it.
-2.	At the [Storage Account Name] blade under Settings + networking click on Networking.
-3.	In the Right-Pane click on Private endpoint connections then click on + Private endpoint.
-4.	At the Create private endpoint | Basics screen enter/select the following then click Next | Resource:
+1.	In the Azure Portal search box enter the name of the previously created **Storage Account** then once it is found click on it.
+2.	At the **[Storage Account Name]** blade under **Settings + networking** click on **Networking**.
+3.	In the **Right-Pane** click on **Private endpoint connections** then click on **+ Private endpoint**.
+4.	At the **Create private endpoint | Basics** screen **enter/select** the following then click **Next | Resource:**
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Project Details*</ins>  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Subscription:**&nbsp;&nbsp;&nbsp;&nbsp;[Select Storage Account Subscription]  
@@ -208,13 +208,14 @@
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Instance Details*</ins>  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name:**&nbsp;&nbsp;&nbsp;&nbsp;Enter a descriptive name  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example:  Functionapptranslator-queue*  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Region:**&nbsp;&nbsp;&nbsp;&nbsp;[Select a Region]  
 
-5.	At the Create private endpoint | Resource screen enter/select the following then click Next : Virtual Network:
+6.	At the **Create private endpoint | Resource** screen **enter/select** the following then click **Next : Virtual Network:**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Target sub-resource:**&nbsp;&nbsp;&nbsp;&nbsp;[Use the pulldown to select blob]
 
-6.	At the Create private endpoint | Virtual Network screen enter/select the following then click Next : Virtual Tags:
+6.	At the **Create private endpoint | Virtual Network** screen **enter/select** the following then click **Next : Virtual Tags:**
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Networking*</ins>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Virtual network:**&nbsp;&nbsp;&nbsp;&nbsp;[Select Previously Created Virtual Network]  
@@ -227,39 +228,38 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make sure for each DNS Zone that the Subscription and Resource Group are selected where the Function App Infrastructure exists
 
-7.	At the Create a private endpoint | Tags screen click Next : Review + create.
-8.	At the Create a private endpoint | Review + create screen click Create.
+7.	At the **Create a private endpoint | Tags** screen click **Next : Review + create**.
+8.	At the **Create a private endpoint | Review + create** screen click **Create**.
 
 #### 3.2.5&nbsp;&nbsp;Assign Translator System Managed Identity Storage Permissions  
-1.	In the Azure Portal search box enter the name of the previously created Storage Account then once it is found click on it.
-2.	At the [Storage Account Name] blade click on Access Control (IAM).
-3.	In the Right-Pane click on + Add | Add role assignment.
-4.	At the Add role assignment | Role blade under Job function roles type Storage Blob Data Contributor and click on it when found then click Next.
-5.	At the Add role assignment | Members blade select Managed identity then click on + Select Members.
-6.	At the Select managed identities pop-out window use the Managed identity pull-down menu to select Translator.
-7.	Click the previously created Translator then click Select.
-8.	Click Review + assign.
+1.	In the Azure Portal search box enter the name of the previously created **Storage Account** then once it is found click on it.
+2.	At the **[Storage Account Name]** blade click on **Access Control (IAM)**.
+3.	In the **Right-Pane** click on **+ Add | Add role assignment**.
+4.	At the **Add role assignment | Role** blade under Job function roles type **Storage Blob Data Contributor** and click on it when found then click **Next**.
+5.	At the **Add role assignment | Members** blade select **Managed identity** then click on **+ Select Members**.
+6.	At the **Select managed identities** pop-out window use the **Managed identity** pull-down menu to select **Translator**.
+7.	Click the previously created **Translator** then click **Select**.
+8.	Click **Review + assign**.
+9.	Click **Review + assign**.
 
 #### 3.2.6&nbsp;&nbsp;Retrieving Storage Account Connection String  
-9.	Use the search box and enter Storage accounts then select the object.
-10.	At the Storage accounts blade locate and click on the previously created Storage Account.
-11.	At the [Storage Account Name] blade under Security + networking click on Access keys.
-12.	In the Right-Pane under key1 for the Connection string value click Show then click the Copy button and store the Storage Account 
+1.	Use the search box and enter **Storage accounts** then select the object.
+2.	At the **Storage accounts** blade locate and click on the previously created Storage Account.
+3.	At the **[Storage Account Name]** blade under **Security + networking** click on **Access keys**.
+4.	In the **Right-Pane** under **key1** for the **Connection string value** click **Show** then click the **Copy button** and store the **Storage Account** .
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connection string value which will be used later for the Function App Configuration.
 
 #### 3.2.7&nbsp;&nbsp;Retrieving Storage Account Blob Endpoint  
-1.	Use the search box and enter Storage accounts then select the object.
-2.	At the Storage accounts blade locate and click on the previously created Storage Account.
-3.	At the [Storage Account Name] blade under Settings click on Endpoints.
-4.	In the Right-Pane under Blob service locate the Primary endpoint blob service URL then click the Copy button and store the Storage Account Blob Endpoint URL value which will be used later for the Function App Configuration.
+1.	At the **[Storage Account Name]** blade under **Settings** click on **Endpoints**.
+2.	In the **Right-Pane** under **Blob service** locate the **Primary endpoint blob service URL** then click the **Copy button** and store the **Storage Account Blob Endpoint URL value** which will be used later for the **Function App Configuration**.
 
 ## 4&nbsp;&nbsp;Function App Deployment
 ### 4.1&nbsp;&nbsp;Function App
 #### 4.1.1&nbsp;&nbsp;Deployment
-1.	Use the search box and enter Function App then select the object.
-2.	At the Function App blade click on + Add.
-3.	At the Create Function App | Basics screen enter the following then click on Next : Hosting.
+1.	Use the search box and enter **Function App** then select the object.
+2.	At the **Function App** blade click on **+ Add**.
+3.	At the **Create Function App | Basics** screen enter the following then click on **Next : Hosting**.
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Project Details*</ins>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Resource Group:**&nbsp;&nbsp;&nbsp;&nbsp;[Select Previously Created Resource Group]  
@@ -272,29 +272,29 @@
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Hosting*</ins>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Hosting options and plans:**&nbsp;&nbsp;&nbsp;&nbsp;App service plan  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Linux Plan (USGov Virginia):**&nbsp;&nbsp;&nbsp;&nbsp;Follow below Steps to select existing  	 
-1.	Click on Create new.
-2.	At the New App Service Plan enter a descriptive name for the Name then click OK. (Example:  Translator-FunctionApp)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Linux Plan (USGov Virginia):**&nbsp;&nbsp;&nbsp;&nbsp;Follow below Steps then click **Next: Storage**.	 
+1.	Click on **Create new**.
+2.	At the **New App Service Plan** enter a descriptive name for the **Name** then click **. (Example:  Translator-FunctionApp-ASP)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Pricing plan:**&nbsp;&nbsp;&nbsp;&nbsp;Premium V3 PxV3			
 
-4.	At the Create Function App | Storage screen enter the following then click on Next : Networking.
+4.	At the **Create Function App | Storage** screen select the following then click on **Next : Networking**.
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Storage*</ins>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Storage type:**&nbsp;&nbsp;&nbsp;&nbsp;Azure Storage  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Storage account:**&nbsp;&nbsp;&nbsp;&nbsp;[Select previously created Function App Storage Account]  
 
-5.	At the Create Function App | Networking screen enter the following then click on Next : Monitoring.
+5.	At the **Create Function App | Networking** screen enter the following then click on **Next : Monitoring**.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Enable public access:**&nbsp;&nbsp;&nbsp;&nbsp;On  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Enable network injection:**&nbsp;&nbsp;&nbsp;&nbsp; Off
 
-6.	At the Create Logic App | Monitoring screen enter the following then click on Review + create.
+6.	At the **Create Logic App | Monitoring** screen enter the following then click on **Review + create**.
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Application Insights*</ins>  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Enable Application Insights:**&nbsp;&nbsp;&nbsp;&nbsp;No
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Enable Application Insights:**&nbsp;&nbsp;&nbsp;&nbsp;Yes
 
-7.	Click Create.
+7.	Click **Create**.
 
 #### 4.1.2&nbsp;&nbsp;Create Function App Private Endpoint  
 1.	In the Azure Portal search box enter the name of the previously created Function App then once it is found click on it.
