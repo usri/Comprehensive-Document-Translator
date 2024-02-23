@@ -341,7 +341,7 @@
 6.	Use the **Subnet** pull-down menu to select the **ServerFarm** Subnet then click **Connect**.
 
 #### 4.1.4&nbsp;&nbsp;Function App Configuration  
-1.	At the Your deployment is complete screen click on **Go to resource**.
+1.	In the Azure Portal search box enter the name of the previously created **Function App** then once it is found click on it.
 2.	At the **[Function App Name]** blade under **Settings** click on **Configuration**.
 3.	In the **Right-Pane** under **Application settings** click on **+ New application setting**.
 4.	At the **Add/Edit application setting** enter the following then click **OK**:
@@ -362,15 +362,15 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name:**&nbsp;&nbsp;&nbsp;&nbsp;translator_endpoint  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Value:**&nbsp;&nbsp;&nbsp;&nbsp;[Enter the Translator Endpoint URL without brackets]
 
-8.	In the Right-Pane under Application settings click on + New application setting.
-9.	At the Add/Edit application setting enter the following then click OK:
+8.	In the **Right-Pane** under **Application settings** click on **+ New application setting**.
+9.	At the **Add/Edit application setting** enter the following then click **OK**:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name:**&nbsp;&nbsp;&nbsp;&nbsp;translator_KEY  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Value:**&nbsp;&nbsp;&nbsp;&nbsp;[Enter the Translator Endpoint URL without brackets]
 
-10.	At the top of the Right-Pane click on General settings.
-11.	Under Stack settings | Basic Auth Publishing Credentials click On.
-12.	At the top of the Right-Pane click Save then Continue.
+10.	At the top of the **Right-Pane** click on **General settings**.
+11.	Under **Stack settings | SCM Basic Auth Publishing Credentials** click **On**.
+12.	At the top of the **Right-Pane** click **Save** then **Continue**.
 
 ## 5&nbsp;&nbsp;Deploy Function  
 #### 5.1.1&nbsp;&nbsp;[Add Function upload process here]
