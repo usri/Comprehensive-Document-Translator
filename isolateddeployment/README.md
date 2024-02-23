@@ -62,10 +62,9 @@
 
 #### 2.2.2&nbsp;&nbsp;Retrieving Translator Key & Endpoint
 1.	Once the resource deployment has completed click on **Go to resource**.
-2.	At the Azure AI services | Translators blade locate and click on the previously created Translator.
-3.	At the [Translator Name] blade under Resource Management click on Keys and Endpoint.
-4.	In the Right-Pane click on Show keys then click the Copy button to the right of KEY 1 and store the Translator Key value which will be used later for the Function App Configuration.
-5.	In the Right-Pane under Web API click the Copy button to the right of Document Translation and store the Translator Endpoint URL value which will be used later for the Function App Configuration.
+2.	At the **[Translator Name]** blade under **Resource Management** click on **Keys and Endpoint**.
+3.	In the **Right-Pane** click on **Show keys** then click the **Copy button** to the right of **KEY 1** and store the **Translator Key value** which will be used later for the **Function App Configuration**.
+4.	In the **Right-Pane** under **Web API** click the **Copy button** to the right of **Document Translation** and store the **Translator Endpoint URL value** which will be used later for the **Function App Configuration**.
 
 ## 3&nbsp;&nbsp;Function App Infrastructure Deployment
 ### 3.1&nbsp;&nbsp;Virtual Network
