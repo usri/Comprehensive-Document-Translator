@@ -381,11 +381,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To manage the Function App which will have Public Access disabled a Management workstation will be needed.  This workstation must be able to route to the Function App over Private Endpoints.  To do this, a Virtual Network Peering must be set up between the FunctionApp-VNet and the Virtual Network where the Management Workstation exists.  
 
 #### 6.1.1&nbsp;&nbsp;Virtual Network Peering (Only needed if creating new VNet)  
-1.	Use the search box and enter Virtual Networks then select the object.
-2.	At the Virtual networks blade click on the Function App VNet.
-3.	In the Left-Pane scroll down to the Settings section and click on Peerings.
-4.	In the Right-Pane click on a + Add.
-5.	At the Add peering screen under This virtual network enter and select the following:
+1.	Use the search box and enter **Virtual Networks** then select the object.
+2.	At the **Virtual networks** blade click on the **Function App VNet**.
+3.	In the **Left-Pane** scroll down to the **Settings** section and click on **Peerings**.
+4.	In the **Right-Pane** click on a **+ Add**.
+5.	At the **Add peering** screen under **This virtual network** enter and select the following:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Peering link name:**&nbsp;&nbsp;&nbsp;&nbsp;[Enter VNet Name of Management Workstation]
 
@@ -393,7 +393,7 @@
 - Allow access to remote virtual 
 - Allow traffic to remote virtual network
 
-6.	At the Add peering screen under Remote virtual network enter and select the following then click Add:
+6.	At the **Add peering** screen under **Remote virtual network** enter and select the following then click **Add:**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Peering link name:**&nbsp;&nbsp;&nbsp;&nbsp;FunctionApp-VNet		
 
@@ -405,9 +405,9 @@
 
 ### 6.2&nbsp;&nbsp;Network Security Group  
 #### 6.2.1&nbsp;&nbsp;Deployment  
-1.	Use the search box and enter Network Security Groups then select the object.
-2.	At the Network security groups blade click on + Create.
-3.	At the Create network security group | Basics screen enter the following then click on Next : IP Addresses.
+1.	Use the search box and enter **Network Security Groups** then select the object.
+2.	At the **Network security groups** blade click on **+ Create**.
+3.	At the **Create network security group | Basics** screen enter the following then click on **Review + create**.
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Project Details*</ins>  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Resource Group:**&nbsp;&nbsp;&nbsp;&nbsp;[Select Previously Created Resource Group]  
@@ -416,13 +416,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name:**&nbsp;&nbsp;&nbsp;&nbsp;Enter a descriptive name  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Region:**&nbsp;&nbsp;&nbsp;&nbsp;[Select a Region]  
 
-4.	Click on Create.
+4.	Click on **Create**.
 
 #### 6.2.2&nbsp;&nbsp;Create Deny All Rules  
-1.	At the Your deployment is complete screen click on Go to resource.
-2.	At the [Network Security Group Name] blade under Settings click on Inbound security rules.
-3.	At the [Network Security Group Name] | Inbound security rules blade click on + Add.
-4.	At the Add inbound security rules pop-out windows enter the following then click Add:
+1.	At the Your deployment is complete screen click on **Go to resource**.
+2.	At the **[Network Security Group Name]** blade under **Settings** click on **Inbound security rules**.
+3.	At the **[Network Security Group Name] | Inbound security rules** blade click on **+ Add**.
+4.	At the **Add inbound security rules** pop-out windows enter the following then click **Add:**
 
 | **Property**             | **Value**        |
 | :----------------------- | :--------------- |
@@ -436,9 +436,9 @@
 | Priority:                | 4000             |
 | Name:                    | Deny-All-Inbound |
 
-5.	On the Left-Pane under Settings click on Outbound security rules.
-6.	At the [Network Security Group Name] | Outbound security rules blade click on + Add.
-7.	At the Add outbound security rules pop-out windows enter the following then click Add:
+5.	On the **Left-Pane** under **Settings** click on **Outbound security rules**.
+6.	At the **[Network Security Group Name] | Outbound security rules** blade click on **+ Add**.
+7.	At the **Add outbound security rules** pop-out windows enter the following then click **Add:**
 
 | **Property**             | **Value**         |
 | :----------------------- | :---------------- |
@@ -453,16 +453,16 @@
 | Name:                    | Deny-All-Outbound |
  
  #### 6.2.3&nbsp;&nbsp;Create Allow All Virtual Network Rules  
-1.	At the [Network Security Group Name] | Inbound security rules blade click on + Add.
-2.	At the Add inbound security rules pop-out windows enter the following then click Add:
+1.	At the **[Network Security Group Name] | Inbound security rules** blade click on **+ Add**.
+2.	At the **Add inbound security rules** pop-out windows enter the following then click **Add:**
 
 
 | **Property**             | **Value**                        |
 | :----------------------- | :------------------------------- |
 | Source:                  | Service Tag                      |
 | Source service tag:      | Virtual Network                  |
-| Source port ranges:      | **                               |
-| Destination:             |  Service Tag                     |
+| Source port ranges:      | *                                |
+| Destination:             | Service Tag                      |
 | Destination service tag: | Virtual Network                  |
 | Service:                 | Custom                           |
 | Destination port ranges: | *                                |
@@ -471,16 +471,16 @@
 | Priority:                | 3500                             |
 | Name:                    | Allow-All-Inbound-VirtualNetwork |
 
-3.	On the Left-Pane under Settings click on Outbound security rules.
-4.	At the [Network Security Group Name] | Outbound security rules blade click on + Add.
-5.	At the Add outbound security rules pop-out windows enter the following then click Add:
+3.	On the **Left-Pane** under **Settings** click on **Outbound security rules**.
+4.	At the **[Network Security Group Name] | Outbound security rules** blade click on **+ Add**.
+5.	At the **Add outbound security rules** pop-out windows enter the following then click **Add:**
 
 | **Property**             | **Value**                         |
 | :----------------------- | :-------------------------------- |
 | Source:                  | Service Tag                       |
 | Source service tag:      | Virtual Network                   |
-| Source port ranges:      | **                                |
-| Destination:             |  Service Tag                      |
+| Source port ranges:      | *                                 |
+| Destination:             | Service Tag                       |
 | Destination service tag: | Virtual Network                   |
 | Service:                 | Custom                            |
 | Destination port ranges: | *                                 |
@@ -490,25 +490,25 @@
 | Name:                    | Allow-All-Outbound-VirtualNetwork |
 
 #### 6.2.4&nbsp;&nbsp;Associate NSG to Subnets  
-1.	At the [Network Security Group Name] blade under Settings click on Subnets.
-2.	In the Right-Pane click on + Associate.
-3.	At the Associate subnet pop-out windows use the Virtual network pull-down menu to select the previously created Virtual Network and use the Subnet pull-down menu to select the ServerFarm subnet.
+1.	At the **[Network Security Group Name]** blade under **Settings** click on **Subnets**.
+2.	In the **Right-Pane** click on **+ Associate**.
+3.	At the **Associate subnet** pop-out windows use the **Virtual network** pull-down menu to select the previously created **Virtual Network** and use the **Subnet** pull-down menu to select the **ServerFarm** subnet.
 4.	Repeat the previous step for the other 2 Subnets listed below:
 - PrivateEndpoints
 - Infrastructure
 
-#### 6.2.5&nbsp;&nbsp;Storage Account  
+#### 6.2.5&nbsp;&nbsp;Storage Account Isolation  
 1.	In the Azure Portal search box enter the name of the previously created Storage Account then once it is found click on it.
-2.	At the [Storage Account Name] blade under Security + Networking click on Networking.
-3.	Under Firewalls and virtual networks click on Disabled then click Save.
+2.	At the **[Storage Account Name]** blade under **Security + Networking** click on **Networking**.
+3.	Under **Firewalls and virtual networks** click on **Disabled** then click **Save**.
 
-#### 6.2.6&nbsp;&nbsp;Translator  
-1.	In the Azure Portal search box enter the name of the previously created Translators then once it is found click on it.
-2.	At the [Translator Name] blade under Resource Management click on Networking.
-3.	Under Firewalls and virtual networks click on Disabled then click Save.
+#### 6.2.6&nbsp;&nbsp;Translator Isolation  
+1.	In the Azure Portal search box enter the name of the previously created **Translators** then once it is found click on it.
+2.	At the **[Translator Name]** blade under **Resource Management** click on **Networking**.
+3.	**Under Firewalls and virtual networks** click on **Disabled** then click **Save**.
 
-#### 6.2.6&nbsp;&nbsp;Function App  
-1.	In the Azure Portal search box enter the name of the previously created Function App then once it is found click on it.
-2.	At the [Translator Name] blade under Settings click on Networking.
-3.	In the Right-Pane under Inbound Traffic click on Access restriction.
-4.	At the Access Restrictions screen under App access uncheck Allow public access and click Save then Continue.
+#### 6.2.6&nbsp;&nbsp;Function App Isolation
+1.	In the Azure Portal search box enter the name of the previously created **Function App** then once it is found click on it.
+2.	At the **[Translator Name]** blade under **Settings** click on **Networking**.
+3.	In the **Right-Pane** under **Inbound traffic configuration | Public network access** click on **Enable with no access restrictions**.
+4.	At the **Access Restrictions** screen under **App access | Public network access** select **Disabled** and click **Save** then **Continue**.
