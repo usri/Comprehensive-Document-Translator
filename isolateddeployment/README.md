@@ -372,9 +372,17 @@
 11.	Under **Stack settings | SCM Basic Auth Publishing Credentials** click **On**.
 12.	At the top of the **Right-Pane** click **Save** then **Continue**.
 
-## 5&nbsp;&nbsp;Deploy Function  
-#### 5.1.1&nbsp;&nbsp;[Add Function upload process here]
+## 5&nbsp;&nbsp;Upload Function  
+1.	At the **[Function App Name]** blade under **Deployment** click on **Deployment Center**.
+2.	In the **Right-Pane** blade under **settings** use the **Source** pull-down menu to select **Manual Deployment (Push) | External Git**.
+3.  Under **External Git** enter the following:  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Repository**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://github.com/elliottfieldsjr/Translator-FunctionApp   
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Branch**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;main   
+
+4.	At the top of the **Right-Pane** click **Save**.
 
 ## 6&nbsp;&nbsp;Management Network Isolation  
 ### 6.1&nbsp;&nbsp;Management Azure Virtual Machine  
