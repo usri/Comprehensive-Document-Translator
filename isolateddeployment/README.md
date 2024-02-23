@@ -173,6 +173,7 @@
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Instance Details*</ins>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name:**&nbsp;&nbsp;&nbsp;&nbsp;Enter a descriptive name  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example:  Functionapptranslator-blob*  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Region:**&nbsp;&nbsp;&nbsp;&nbsp;[Select a Region]  
 
 5.	At the Create private endpoint | Resource screen enter/select the following then click Next : Virtual Network:
