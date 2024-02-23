@@ -35,15 +35,14 @@
 #### 2.1.1&nbsp;&nbsp;Deployment
 1.	Use the search box and enter **Resource groups** then select the object.
 2.	At the **Resource group** blade click on **+ Create**.
-3.	At the **Create a resource group** screen enter a descriptive name (Example: Backup-Reporting-Solution) then click on **Review + create**.
+3.	At the **Create a resource group** screen enter a descriptive name (Example: Translation-FunctionApp) then click on **Review + create**.
 4.	Click **Create**.
-
 
 ### 2.2&nbsp;&nbsp;Translator Service
 #### 2.2.1&nbsp;&nbsp;Deployment
-1.	Use the search box and enter Translators then select the object.
-2.	At the Azure AI services | Translator blade click on + Create.
-3.	At the Create Translator | Basics screen enter the following then click on Next.
+1.	Use the search box and enter **Translators** then select the object.
+2.	At the **Azure AI services | Translator** blade click on + **Create**.
+3.	At the **Create Translator | Basics** screen enter the following then click on **Next**.
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Project Details*</ins>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Resource Group:**&nbsp;&nbsp;&nbsp;&nbsp;[Select Existing Resource Group]
@@ -53,52 +52,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name:**&nbsp;&nbsp;&nbsp;&nbsp;[Enter Translator Name]  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Pricing tier:**&nbsp;&nbsp;&nbsp;&nbsp;Standard S1 (Pay as you go)
 
-4.	At the Create Translator | Networking screen click Next.
-5.	At the Create Translator | Identity screen enter the following then click on Review + create:
+4.	At the **Create Translator | Networking** screen click **Next**.
+5.	At the **Create Translator | Identity** screen enter the following then click on **Review + create**:
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*System assigned managed identity*</ins>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Status:**&nbsp;&nbsp;&nbsp;&nbsp;On
 
-6.	Click Create.
+6.	Click **Create**.
 
-#### 2.2.2&nbsp;&nbsp;Create Translator Private Endpoint
-1.	In the Azure Portal search box enter the name of the previously created Translator then once it is found click on it.
-2.	At the [Translator Name] blade under Resource Management click on Networking.
-3.	In the Right-Pane click on Private endpoint connections then click on + Private endpoint.
-4.	At the Create private endpoint | Basics screen enter/select the following then click Next | Resource:
-
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Project Details*</ins>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Subscription:**&nbsp;&nbsp;&nbsp;&nbsp;[Select Storage Account Subscription]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Resource Group:**&nbsp;&nbsp;&nbsp;&nbsp;[Select Previously Created Resource Group]  
-
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Instance details*</ins>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name:**&nbsp;&nbsp;&nbsp;&nbsp;[Enter a descriptive name]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example:  Functionapptranslator-account*  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name:**&nbsp;&nbsp;&nbsp;&nbsp;[Enter a descriptive name]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Region:**&nbsp;&nbsp;&nbsp;&nbsp;[Select a Region]  
-
-5.	At the Create private endpoint | Resource screen enter/select the following then click Next : Virtual Network:  
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Target sub-resource:**&nbsp;&nbsp;&nbsp;&nbsp;[Use the pulldown to select account]  
-
-6.	At the Create private endpoint | Virtual Network screen enter/select the following then click Next : Virtual Tags:
-
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Networking*</ins>  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Virtual network:**&nbsp;&nbsp;&nbsp;&nbsp;[Select Previously Created Virtual Network]  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Subnet:**&nbsp;&nbsp;&nbsp;&nbsp;[Select PrivateEndpoints Subnet]  
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Private IP configuration:**&nbsp;&nbsp;&nbsp;&nbsp;Dynamically allocated IP address
-
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Private DNS integration*</ins>  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Integrate with private dns zone:**&nbsp;&nbsp;&nbsp;&nbsp;Yes  
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Make sure for each DNS Zone that the Subscription and Resource Group are selected where the Function App Infrastructure exists*
-
-7.	At the Create a private endpoint | Tags screen click Next : Review + create.
-8.	At the Create a private endpoint | Review + create screen click Create.
-
-#### 2.2.3&nbsp;&nbsp;Retrieving Translator Key & Endpoint
-1.	Use the search box and enter Translators then select the object.
+#### 2.2.2&nbsp;&nbsp;Retrieving Translator Key & Endpoint
+1.	Once the resource deployment has completed click on **Go to resource**.
 2.	At the Azure AI services | Translators blade locate and click on the previously created Translator.
 3.	At the [Translator Name] blade under Resource Management click on Keys and Endpoint.
 4.	In the Right-Pane click on Show keys then click the Copy button to the right of KEY 1 and store the Translator Key value which will be used later for the Function App Configuration.
@@ -130,6 +93,43 @@
 | PrivateEndpoints  | 172.16.2.48/28           |
 
 5.	Click Create.
+
+### 3.2&nbsp;&nbsp;Translator  
+#### 3.2.1&nbsp;&nbsp;Create Translator Private Endpoint
+1. Once the resource deployment has completed click on **Go to resource**.
+2.	At the **[Translator Name]** blade under **Resource Management** click on **Networking**.
+3.	In the **Right-Pane** click on **Private endpoint connections** then click on **+ Private endpoint**.
+4.	At the **Create private endpoint | Basics** screen enter/select the following then click **Next | Resource:**
+
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Project Details*</ins>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Subscription:**&nbsp;&nbsp;&nbsp;&nbsp;[Select Storage Account Subscription]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Resource Group:**&nbsp;&nbsp;&nbsp;&nbsp;[Select Previously Created Resource Group]  
+
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Instance details*</ins>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name:**&nbsp;&nbsp;&nbsp;&nbsp;[Enter a descriptive name]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Example:  Functionapptranslator-account*  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Name:**&nbsp;&nbsp;&nbsp;&nbsp;[Enter a descriptive name]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Region:**&nbsp;&nbsp;&nbsp;&nbsp;[Select a Region]  
+
+5.	At the Create private endpoint | Resource screen enter/select the following then click Next : Virtual Network:  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Target sub-resource:**&nbsp;&nbsp;&nbsp;&nbsp;[Use the pulldown to select account]  
+
+6.	At the Create private endpoint | Virtual Network screen enter/select the following then click Next : Virtual Tags:
+
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Networking*</ins>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Virtual network:**&nbsp;&nbsp;&nbsp;&nbsp;[Select Previously Created Virtual Network]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Subnet:**&nbsp;&nbsp;&nbsp;&nbsp;[Select PrivateEndpoints Subnet]  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Private IP configuration:**&nbsp;&nbsp;&nbsp;&nbsp;Dynamically allocated IP address
+
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Private DNS integration*</ins>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Integrate with private dns zone:**&nbsp;&nbsp;&nbsp;&nbsp;Yes  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Make sure for each DNS Zone that the Subscription and Resource Group are selected where the Function App Infrastructure exists*
+
+7.	At the Create a private endpoint | Tags screen click Next : Review + create.
+8.	At the Create a private endpoint | Review + create screen click Create.
 
 ### 3.2&nbsp;&nbsp;Storage Accounts
 #### 3.2.1&nbsp;&nbsp;Function App Job Storage Deployment  
