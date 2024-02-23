@@ -33,10 +33,10 @@
 ## 2&nbsp;&nbsp;Translator Service Deployment
 ### 2.1&nbsp;&nbsp;Resource Group  
 #### 2.1.1&nbsp;&nbsp;Deployment
-1.	Use the search box and enter Resource groups then select the object.
-2.	At the Resource group blade click on + Create.
-3.	At the Create a resource group screen enter a descriptive name (Example: Backup-Reporting-Solution) then click on Review + create.
-4.	Click Create.
+1.	Use the search box and enter **Resource groups** then select the object.
+2.	At the **Resource group** blade click on **+ Create**.
+3.	At the **Create a resource group** screen enter a descriptive name (Example: Backup-Reporting-Solution) then click on **Review + create**.
+4.	Click **Create**.
 
 
 ### 2.2&nbsp;&nbsp;Translator Service
