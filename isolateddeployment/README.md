@@ -8,6 +8,7 @@
 - Deploy a secured document translation solution using Azure Translator
 
 ### 1.3&nbsp;&nbsp;Prerequisites
+- /27 Available Address Space
 - Dedicated Subnet with a /27 Address Space
 
 ### 1.4&nbsp;&nbsp;Objects Deployed
@@ -69,9 +70,9 @@
 ## 3&nbsp;&nbsp;Function App Infrastructure Deployment
 ### 3.1&nbsp;&nbsp;Virtual Network
 #### 3.1.1&nbsp;&nbsp;Deployment
-1.	Use the search box and enter Virtual Networks then select the object.
-2.	At the Virtual Networks blade click on + Create.
-3.	At the Create virtual network | Basics screen enter the following then click on Next : IP Addresses.
+1.	Use the search box and enter **Virtual Networks** then select the object.
+2.	At the **Virtual Networks** blade click on **+ Create**.
+3.	At the **Create virtual network | Basics** screen enter the following then click on **Nexts**.
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Project Details*</ins>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Resource Group:**&nbsp;&nbsp;&nbsp;&nbsp;[Select Previously Created Resource Group]  
@@ -79,7 +80,8 @@
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>*Instance Details*</ins>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Region:**&nbsp;&nbsp;&nbsp;&nbsp;[Select a Region]  
 
-4.	At the Create virtual network | IP Addresses screen enter the following then click on Review + create.
+4.  At the **Create virtual network | Security** click **Next**.
+5.	At the **CCreate virtual network | IP Addresses** screen create/enter the following then click on **Review + create**.
 
 *Example IPv4 address space:*  
 172.16.2.0/26
@@ -91,11 +93,11 @@
 | Infrastructure    | 172.16.2.32/28           |
 | PrivateEndpoints  | 172.16.2.48/28           |
 
-5.	Click Create.
+6.	Click **Create**.
 
 ### 3.2&nbsp;&nbsp;Translator  
 #### 3.2.1&nbsp;&nbsp;Create Translator Private Endpoint
-1. Once the resource deployment has completed click on **Go to resource**.
+1.	In the **Azure Portal** search box enter the name of the previously created **Translator** then once it is found click on it.
 2.	At the **[Translator Name]** blade under **Resource Management** click on **Networking**.
 3.	In the **Right-Pane** click on **Private endpoint connections** then click on **+ Private endpoint**.
 4.	At the **Create private endpoint | Basics** screen enter/select the following then click **Next | Resource:**
