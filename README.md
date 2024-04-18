@@ -29,7 +29,7 @@ You will need to handle different file types as follows:
 
 ## Solution Approach  
 We followed the approach outlined below and have shared all the code in this repository:
-![Document Translator solution approach](images/document-translator-workflow.png)
+![Document Translator solution approach](images/document-translator-workflow-updated.png)
 
 We have three functions here
 *   docconvertorfnction
